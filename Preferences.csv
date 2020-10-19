@@ -1,0 +1,75 @@
+First name;Surname;Student ID;P1;P2;P3;W1;W2;W3
+Name1;Surname1;1;Satellite Recycling Station;Sustainable GEO;Debris Scavenger Spacecraft;4000 Electrical;5000 Payload;1000 Systems
+Name2;Surname2;2;Satellite Recycling Station;Sustainable GEO;Comet Sample Return;1000 Systems;2000 Mission;5000 Payload
+Name3;Surname3;3;Comet Sample Return;Debris Scavenger Spacecraft;Satellite Recycling Station;2000 Mission;1000 Systems;3000 Mechanical
+Name4;Surname4;4;Comet Sample Return;Debris Scavenger Spacecraft;Satellite Recycling Station;2000 Mission;5000 Payload;3000 Mechanical
+Name5;Surname5;5;Satellite Recycling Station;Debris Scavenger Spacecraft;Comet Sample Return;1000 Systems;2000 Mission;3000 Mechanical
+Name6;Surname6;6;Comet Sample Return;Lunar Meteorite Hunt;Satellite Recycling Station;2000 Mission;1000 Systems;3000 Mechanical
+Name7;Surname7;7;Satellite Recycling Station;Lunar Habitats;Sustainable GEO;1000 Systems;2000 Mission;5000 Payload
+Name8;Surname8;8;Satellite Recycling Station;Comet Sample Return;Debris Scavenger Spacecraft;2000 Mission;3000 Mechanical;5000 Payload
+Name9;Surname9;9;Comet Sample Return;Lunar Habitats;Lunar Meteorite Hunt;2000 Mission;5000 Payload;4000 Electrical
+Name10;Surname10;10;Debris Scavenger Spacecraft;Satellite Recycling Station;Comet Sample Return;1000 Systems;2000 Mission;5000 Payload
+Name11;Surname11;11;Comet Sample Return;Lunar Meteorite Hunt;Debris Scavenger Spacecraft;2000 Mission;1000 Systems;3000 Mechanical
+Name12;Surname12;12;Comet Sample Return;Debris Scavenger Spacecraft;Lunar Meteorite Hunt;2000 Mission;5000 Payload;1000 Systems
+Name13;Surname13;13;Lunar Meteorite Hunt;Satellite Recycling Station;Debris Scavenger Spacecraft;3000 Mechanical;5000 Payload;2000 Mission
+Name14;Surname14;14;Satellite Recycling Station;Debris Scavenger Spacecraft;Lunar Habitats;3000 Mechanical;5000 Payload;1000 Systems
+Name15;Surname15;15;Satellite Recycling Station;Debris Scavenger Spacecraft;Lunar Meteorite Hunt;2000 Mission;1000 Systems;5000 Payload
+Name16;Surname16;16;Comet Sample Return;Satellite Recycling Station;Debris Scavenger Spacecraft;1000 Systems;3000 Mechanical;4000 Electrical
+Name17;Surname17;17;Debris Scavenger Spacecraft;Satellite Recycling Station;Lunar Meteorite Hunt;5000 Payload;3000 Mechanical;4000 Electrical
+Name18;Surname18;18;Comet Sample Return;Satellite Recycling Station;Lunar Meteorite Hunt;2000 Mission;5000 Payload;1000 Systems
+Name19;Surname19;19;Comet Sample Return;Satellite Recycling Station;Lunar Meteorite Hunt;2000 Mission;5000 Payload;1000 Systems
+Name20;Surname20;20;Comet Sample Return;Sustainable GEO;Debris Scavenger Spacecraft;3000 Mechanical;1000 Systems;5000 Payload
+Name21;Surname21;21;Satellite Recycling Station;Lunar Meteorite Hunt;Comet Sample Return;1000 Systems;2000 Mission;5000 Payload
+Name22;Surname22;22;Lunar Meteorite Hunt;Satellite Recycling Station;Debris Scavenger Spacecraft;3000 Mechanical;2000 Mission;5000 Payload
+Name23;Surname23;23;Comet Sample Return;Satellite Recycling Station;Debris Scavenger Spacecraft;5000 Payload;2000 Mission;3000 Mechanical
+Name24;Surname24;24;Debris Scavenger Spacecraft;Comet Sample Return;Lunar Meteorite Hunt;4000 Electrical;5000 Payload;2000 Mission
+Name25;Surname25;25;Comet Sample Return;Satellite Recycling Station;Sustainable GEO;1000 Systems;2000 Mission;3000 Mechanical
+Name26;Surname26;26;Debris Scavenger Spacecraft;Comet Sample Return;Satellite Recycling Station;2000 Mission;1000 Systems;3000 Mechanical
+Name27;Surname27;27;Debris Scavenger Spacecraft;Comet Sample Return;Lunar Meteorite Hunt;2000 Mission;4000 Electrical;5000 Payload
+Name28;Surname28;28;Comet Sample Return;Satellite Recycling Station;Sustainable GEO;2000 Mission;3000 Mechanical;5000 Payload
+Name29;Surname29;29;Comet Sample Return;Lunar Habitats;Lunar Meteorite Hunt;1000 Systems;2000 Mission;5000 Payload
+Name30;Surname30;30;Lunar Meteorite Hunt;Comet Sample Return;Debris Scavenger Spacecraft;4000 Electrical;5000 Payload;1000 Systems
+Name31;Surname31;31;Comet Sample Return;Lunar Meteorite Hunt;Debris Scavenger Spacecraft;2000 Mission;3000 Mechanical;5000 Payload
+Name32;Surname32;32;Satellite Recycling Station;Comet Sample Return;Debris Scavenger Spacecraft;5000 Payload;1000 Systems;2000 Mission
+Name33;Surname33;33;Comet Sample Return;Lunar Meteorite Hunt;Satellite Recycling Station;2000 Mission;5000 Payload;1000 Systems
+Name34;Surname34;34;Satellite Recycling Station;Debris Scavenger Spacecraft;Comet Sample Return;5000 Payload;3000 Mechanical;2000 Mission
+Name35;Surname35;35;Comet Sample Return;Lunar Meteorite Hunt;Satellite Recycling Station;2000 Mission;5000 Payload;1000 Systems
+Name36;Surname36;36;Sustainable GEO;Debris Scavenger Spacecraft;Lunar Meteorite Hunt;2000 Mission;5000 Payload;1000 Systems
+Name37;Surname37;37;Comet Sample Return;Satellite Recycling Station;Debris Scavenger Spacecraft;2000 Mission;5000 Payload;3000 Mechanical
+Name38;Surname38;38;Comet Sample Return;Lunar Meteorite Hunt;Debris Scavenger Spacecraft;2000 Mission;1000 Systems;5000 Payload
+Name39;Surname39;39;Comet Sample Return;Debris Scavenger Spacecraft;Satellite Recycling Station;2000 Mission;5000 Payload;3000 Mechanical
+Name40;Surname40;40;Lunar Meteorite Hunt;Comet Sample Return;Debris Scavenger Spacecraft;2000 Mission;3000 Mechanical;4000 Electrical
+Name41;Surname41;41;Comet Sample Return;Lunar Habitats;Satellite Recycling Station;1000 Systems;5000 Payload;3000 Mechanical
+Name42;Surname42;42;Satellite Recycling Station;Comet Sample Return;Lunar Meteorite Hunt;1000 Systems;2000 Mission;5000 Payload
+Name43;Surname43;43;Comet Sample Return;Lunar Meteorite Hunt;Debris Scavenger Spacecraft;3000 Mechanical;4000 Electrical;2000 Mission
+Name44;Surname44;44;Lunar Habitats;Debris Scavenger Spacecraft;Comet Sample Return;3000 Mechanical;2000 Mission;5000 Payload
+Name45;Surname45;45;Lunar Habitats;Debris Scavenger Spacecraft;Satellite Recycling Station;3000 Mechanical;5000 Payload;1000 Systems
+Name46;Surname46;46;Sustainable GEO;Debris Scavenger Spacecraft;Lunar Habitats;1000 Systems;2000 Mission;5000 Payload
+Name47;Surname47;47;Comet Sample Return;Lunar Meteorite Hunt;Satellite Recycling Station;2000 Mission;3000 Mechanical;4000 Electrical
+Name48;Surname48;48;Comet Sample Return;Satellite Recycling Station;Lunar Meteorite Hunt;2000 Mission;4000 Electrical;3000 Mechanical
+Name49;Surname49;49;Comet Sample Return;Lunar Meteorite Hunt;Satellite Recycling Station;2000 Mission;1000 Systems;5000 Payload
+Name50;Surname50;50;Debris Scavenger Spacecraft;Sustainable GEO;Satellite Recycling Station;1000 Systems;5000 Payload;4000 Electrical
+Name51;Surname51;51;Comet Sample Return;Lunar Meteorite Hunt;Sustainable GEO;2000 Mission;1000 Systems;5000 Payload
+Name52;Surname52;52;Comet Sample Return;Lunar Habitats;Satellite Recycling Station;1000 Systems;2000 Mission;5000 Payload
+Name53;Surname53;53;Comet Sample Return;Satellite Recycling Station;Debris Scavenger Spacecraft;2000 Mission;3000 Mechanical;5000 Payload
+Name54;Surname54;54;Lunar Meteorite Hunt;Debris Scavenger Spacecraft;Comet Sample Return;2000 Mission;1000 Systems;5000 Payload
+Name55;Surname55;55;Lunar Meteorite Hunt;Comet Sample Return;Satellite Recycling Station;2000 Mission;4000 Electrical;1000 Systems
+Name56;Surname56;56;Lunar Habitats;Lunar Meteorite Hunt;Satellite Recycling Station;1000 Systems;2000 Mission;5000 Payload
+Name57;Surname57;57;Comet Sample Return;Satellite Recycling Station;Lunar Meteorite Hunt;2000 Mission;4000 Electrical;3000 Mechanical
+Name58;Surname58;58;Lunar Habitats;Satellite Recycling Station;Comet Sample Return;5000 Payload;2000 Mission;3000 Mechanical
+Name59;Surname59;59;Debris Scavenger Spacecraft;Lunar Habitats;Lunar Meteorite Hunt;1000 Systems;2000 Mission;3000 Mechanical
+Name60;Surname60;60;Satellite Recycling Station;Comet Sample Return;Lunar Habitats;3000 Mechanical;2000 Mission;1000 Systems
+Name61;Surname61;61;Lunar Habitats;Comet Sample Return;Lunar Meteorite Hunt;2000 Mission;5000 Payload;1000 Systems
+Name62;Surname62;62;Comet Sample Return;Satellite Recycling Station;Lunar Meteorite Hunt;2000 Mission;5000 Payload;4000 Electrical
+Name63;Surname63;63;Satellite Recycling Station;Comet Sample Return;Lunar Meteorite Hunt;4000 Electrical;1000 Systems;3000 Mechanical
+Name64;Surname64;64;Satellite Recycling Station;Debris Scavenger Spacecraft;Lunar Meteorite Hunt;5000 Payload;3000 Mechanical;4000 Electrical
+Name65;Surname65;65;Comet Sample Return;Debris Scavenger Spacecraft;Lunar Meteorite Hunt;2000 Mission;4000 Electrical;5000 Payload
+Name66;Surname66;66;Comet Sample Return;Lunar Meteorite Hunt;Satellite Recycling Station;2000 Mission;5000 Payload;1000 Systems
+Name67;Surname67;67;Comet Sample Return;Sustainable GEO;Debris Scavenger Spacecraft;2000 Mission;5000 Payload;1000 Systems
+Name68;Surname68;68;Comet Sample Return;Lunar Meteorite Hunt;Satellite Recycling Station;3000 Mechanical;2000 Mission;1000 Systems
+Name69;Surname69;69;Lunar Meteorite Hunt;Comet Sample Return;Satellite Recycling Station;2000 Mission;1000 Systems;5000 Payload
+Name70;Surname70;70;Comet Sample Return;Debris Scavenger Spacecraft;Lunar Habitats;2000 Mission;3000 Mechanical;5000 Payload
+Name71;Surname71;71;Lunar Meteorite Hunt;Comet Sample Return;Lunar Habitats;2000 Mission;1000 Systems;5000 Payload
+Name72;Surname72;72;Debris Scavenger Spacecraft;Comet Sample Return;Lunar Habitats;3000 Mechanical;5000 Payload;1000 Systems
+Name73;Surname73;73;Comet Sample Return;Lunar Meteorite Hunt;Satellite Recycling Station;5000 Payload;4000 Electrical;2000 Mission
+Name74;Surname74;74;Debris Scavenger Spacecraft;Satellite Recycling Station;Comet Sample Return;2000 Mission;1000 Systems;5000 Payload
