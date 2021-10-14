@@ -17,11 +17,11 @@ NUM_CHOICES_W = 3                         # Number of preferences for work packa
 MAX_NUM_ITERATIONS = 10000                # Max iterations to find the best solution
 # Cost parameters
 # Cost is calculated as sum of 4 exponential terms
-PENALTY_P = 3                           # Penalty assigned for lowering project (as exponential base)
+PENALTY_P = 3                           # Penalty assigned for lowering project (as exponent)
 PENALTY_W = 3                           # Same for work-package (you can differenciate slightly from above)
 PENALTY_CROSS = 9                       # Same correlating of both project and work-package
                                         # Increase if you have many students having lower choices
-PENALTY_OVER = 12                       # Extra penalty for going over the last choice (as exponential base)
+PENALTY_OVER = 12                       # Extra penalty for going over the last choice (as exponent)
                                         # Increase if you have unhappy students (none of their choices assigned)
                                         
 # Others
