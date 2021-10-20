@@ -178,9 +178,9 @@ if __name__ == "__main__":
         
         
         
-        ################################
-        ### OPTIMIZATION REPLACEMENTS###
-        ################################
+        #################################
+        ### OPTIMIZATION REPLACEMENTS ###
+        #################################
         
         while(True):
             doneReplacements = False
