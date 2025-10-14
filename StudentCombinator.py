@@ -1,11 +1,9 @@
 import os
 import sys
 import logging
-import time
 import csv
 import random
 import math
-import collections
 from copy import deepcopy
 
 # CONFIG
