@@ -122,16 +122,6 @@ if __name__ == "__main__":
         remainingP = availableP.copy()
         remainingW = deepcopy(slot)
         
-        # Temporary assignments P
-        for i in studentIndex:
-            if assignedP[i] is None:
-                for choice in range(NUM_CHOICES_P):
-                    if prefP[choice][i] is not None and remainingP[prefP[choice][i]]>0:
-                        assignedP[i] = prefP[choice][i]
-                        assignedChoiceP[i] = choice
-                        remainingP[prefP[choice][i]]-=1
-                        break
-            
         # Fill empty P
         for p,r in enumerate(remainingP):
             for _ in range(r):
@@ -144,22 +134,19 @@ if __name__ == "__main__":
                     assignedP[i] = p
                     # Look if there are empty/invalid preferences, else consider as random choice.
                     assignedChoiceP[i] = next( (c for c in range(NUM_CHOICES_P) if prefP[c][i]==None), NUM_CHOICES_P) 
-            
-        
-        # REVERSE THE LIST! If you had a bad project, you get a better work package
-        studentIndex.reverse()
-        
-        # Temporary assignments WP
+
+        # Temporary assignments P
         for i in studentIndex:
-            if assignedW[i]==None:
-                for choice in range(NUM_CHOICES_W):
-                    if prefW[choice][i] is not None and remainingW[assignedP[i]][prefW[choice][i]]>0:
-                        assignedW[i] = prefW[choice][i]
-                        assignedChoiceW[i] = choice
-                        remainingW[assignedP[i]][prefW[choice][i]]-=1
+            if assignedP[i] is None:
+                for choice in range(NUM_CHOICES_P):
+                    if prefP[choice][i] is not None and remainingP[prefP[choice][i]]>0:
+                        assignedP[i] = prefP[choice][i]
+                        assignedChoiceP[i] = choice
+                        remainingP[prefP[choice][i]]-=1
                         break
-        
-        
+            
+        # REVERSE THE LIST! If you had a bad project, you get a better work package.
+        studentIndex.reverse()
         
         # Fill empty WP
         for p in range(totP):
@@ -173,6 +160,20 @@ if __name__ == "__main__":
                         assignedW[i] = w
                         assignedChoiceW[i] = next( (c for c in range(NUM_CHOICES_W) if prefW[c][i]==None), NUM_CHOICES_W) # Look if there are empty preferences, else assign after last choice.
                         #assignedChoiceW[i] = NUM_CHOICES_W
+
+        # Temporary assignments WP
+        for i in studentIndex:
+            if assignedW[i]==None:
+                for choice in range(NUM_CHOICES_W):
+                    if prefW[choice][i] is not None and remainingW[assignedP[i]][prefW[choice][i]]>0:
+                        assignedW[i] = prefW[choice][i]
+                        assignedChoiceW[i] = choice
+                        remainingW[assignedP[i]][prefW[choice][i]]-=1
+                        break
+        
+        
+        
+        
         
         
         
