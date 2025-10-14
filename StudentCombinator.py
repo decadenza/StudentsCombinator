@@ -41,19 +41,18 @@ if __name__ == "__main__":
         logging.error('File "Slots.csv" not found.')
         exit()
     
-    
     # Read projects and work packages
-    with open(os.path.join(CUR_PATH,'Slots.csv'), 'r', newline='', encoding='utf8', errors='ignore') as slot:
-        sReader = csv.reader(slot, delimiter=';', quotechar='"')
+    with open(os.path.join(CUR_PATH,'Slots.csv'), 'r', newline='', encoding='utf8', errors='ignore') as slot_file:
+        sReader = csv.reader(slot_file, delimiter=';', quotechar='"')
         listW = next(sReader)[1:]   # List of Work Packages
         listP = []                  # List of Projects
-        slot = []                   # Available slots
+        slot = []                   # Available slot matrix indexed by [project][work-package].
         for row in sReader:
             listP.append(row[0])
             slot.append( list(map(int,row[1:]) ))
-    
-    with open( os.path.join(CUR_PATH,'Preferences.csv'), 'r', newline='', encoding='utf8', errors='ignore') as pref:
-        pReader = csv.reader(pref, delimiter=';', quotechar='"')
+
+    with open( os.path.join(CUR_PATH,'Preferences.csv'), 'r', newline='', encoding='utf8', errors='ignore') as pref_file:
+        pReader = csv.reader(pref_file, delimiter=';', quotechar='"')
         prefHeader = next(pReader)[0:3] # Skip header and save data if for later
         prefData = []
         pref = []
@@ -79,9 +78,13 @@ if __name__ == "__main__":
     
     studentIndex = list(range(totStudent))
     
-    # Get the preferences by index. Rows are choices, cols are students.
-    prefP = [ [ totP for _ in range(totStudent) ] for _ in range(NUM_CHOICES_P) ]  # Initialised with NO CHOICE = totP
-    prefW = [ [ totW for _ in range(totStudent) ] for _ in range(NUM_CHOICES_W) ]  # Initialised with NO CHOICE = totW
+    # Get the projects and work packages for each choice level and for each student.
+    # Rows are choices, cols are students.
+    # None means not assigned yet.
+    # NUM_CHOICES_X means randomly assigned.
+    # Otherwise it represents the choice number.
+    prefP = [ [ None for _ in range(totStudent) ] for _ in range(NUM_CHOICES_P) ]
+    prefW = [ [ None for _ in range(totStudent) ] for _ in range(NUM_CHOICES_W) ]
     
     for i, row in enumerate(pref):
         for j,col in enumerate( row[:NUM_CHOICES_P] ):
@@ -98,8 +101,7 @@ if __name__ == "__main__":
                 prefW[j][i] = None # Empty or Invalid choice given
     
     # Get all available slots per project
-    availableP = [sum(row) for row in slot]             # Ordered list of slots numbers for projects
-    
+    availableP = [sum(row) for row in slot]
     
     ####################END#OF#PRE#PROCESSING##############################################################################
     
@@ -120,9 +122,18 @@ if __name__ == "__main__":
         assignedChoiceP = [ None ] * totStudent
         assignedChoiceW = [ None ] * totStudent
         remainingP = availableP.copy()
-        remainingW = deepcopy(slot)
+        remainingSlots = deepcopy(slot)
         
-        # Fill empty P
+        # Temporary assignments P.
+        for i in studentIndex:
+            for choice in range(NUM_CHOICES_P):
+                if prefP[choice][i] is not None and remainingP[prefP[choice][i]]>0:
+                    assignedP[i] = prefP[choice][i]
+                    assignedChoiceP[i] = choice
+                    remainingP[prefP[choice][i]]-=1
+                    break
+
+        # Fill empty P, if any.
         for p,r in enumerate(remainingP):
             for _ in range(r):
                 try:
@@ -132,51 +143,34 @@ if __name__ == "__main__":
                     exit()
                 else:
                     assignedP[i] = p
-                    # Look if there are empty/invalid preferences, else consider as random choice.
+                    # Look if there are empty/invalid preferences, else mark as 4th choice.
                     assignedChoiceP[i] = next( (c for c in range(NUM_CHOICES_P) if prefP[c][i]==None), NUM_CHOICES_P) 
 
-        # Temporary assignments P
-        for i in studentIndex:
-            if assignedP[i] is None:
-                for choice in range(NUM_CHOICES_P):
-                    if prefP[choice][i] is not None and remainingP[prefP[choice][i]]>0:
-                        assignedP[i] = prefP[choice][i]
-                        assignedChoiceP[i] = choice
-                        remainingP[prefP[choice][i]]-=1
-                        break
-            
         # REVERSE THE LIST! If you had a bad project, you get a better work package.
         studentIndex.reverse()
         
-        # Fill empty WP
+        # Temporary assignments WP.
+        for i in studentIndex:
+            for choice in range(NUM_CHOICES_W):
+                if prefW[choice][i] is not None and remainingSlots[assignedP[i]][prefW[choice][i]]>0:
+                    assignedW[i] = prefW[choice][i]
+                    assignedChoiceW[i] = choice
+                    remainingSlots[assignedP[i]][prefW[choice][i]]-=1
+                    break
+
+        # Fill empty WP, if any.
         for p in range(totP):
             for w in range(totW):
-                for _ in range(remainingW[p][w]):
-                    i = next( (x for x in studentIndex if assignedW[x]==None and assignedP[x]==p) , None )
+                for _ in range(remainingSlots[p][w]):
+                    i = next( (x for x in studentIndex if assignedW[x]==None and assignedP[x]==p), None )
                     if i is None:
                         logging.error("ERROR: Number of remaining students does not match remaining work-packages.")
                         exit()
                     else:
                         assignedW[i] = w
+                        # Look if there are empty/invalid preferences, else mark as 4th choice.
                         assignedChoiceW[i] = next( (c for c in range(NUM_CHOICES_W) if prefW[c][i]==None), NUM_CHOICES_W) # Look if there are empty preferences, else assign after last choice.
-                        #assignedChoiceW[i] = NUM_CHOICES_W
 
-        # Temporary assignments WP
-        for i in studentIndex:
-            if assignedW[i]==None:
-                for choice in range(NUM_CHOICES_W):
-                    if prefW[choice][i] is not None and remainingW[assignedP[i]][prefW[choice][i]]>0:
-                        assignedW[i] = prefW[choice][i]
-                        assignedChoiceW[i] = choice
-                        remainingW[assignedP[i]][prefW[choice][i]]-=1
-                        break
-        
-        
-        
-        
-        
-        
-        
         #################################
         ### OPTIMIZATION REPLACEMENTS ###
         #################################
